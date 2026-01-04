@@ -1,4 +1,4 @@
-# JHGNO Crypto Tracker
+# Crypto Tracker
 
 A modern, animated cryptocurrency tracking application built with React, featuring stunning animations powered by Three.js, GSAP, and Anime.js.
 
