@@ -244,4 +244,4 @@ This project is licensed under the MIT License.
 
 ---
 
-**Built with ❤️ and lots of animations by the JHGNO team**
+**Built with ❤️ and lots of animations by the team**
