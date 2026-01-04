@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa500;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="1" fill="#ffd700" opacity="0.8"/>
+  <circle cx="200" cy="120" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="300" cy="60" r="1" fill="#ffd700" opacity="0.9"/>
+  <circle cx="450" cy="100" r="1" fill="#ffffff" opacity="0.7"/>
+  <circle cx="600" cy="90" r="1.5" fill="#ffd700" opacity="0.8"/>
+  <circle cx="700" cy="110" r="1" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Main Logo Circle -->
+  <circle cx="400" cy="250" r="120" fill="url(#goldGradient)" stroke="#ffd700" stroke-width="3"/>
+  
+  <!-- Inner Geometric Pattern -->
+  <polygon points="400,160 460,220 400,280 340,220" fill="none" stroke="#8b4513" stroke-width="2"/>
+  <polygon points="400,180 440,220 400,260 360,220" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+  
+  <!-- JHGNO Text -->
+  <text x="400" y="260" font-family="serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#8b4513">JHGNO</text>
+  
+  <!-- Bull and Bear (simplified) -->
+  <path d="M 320 200 L 340 180 L 360 200 L 350 220 Z" fill="#c0c0c0" stroke="#999" stroke-width="1"/>
+  <path d="M 440 200 L 460 180 L 480 200 L 470 220 Z" fill="#c0c0c0" stroke="#999" stroke-width="1"/>
+  
+  <!-- Outer Ring -->
+  <circle cx="400" cy="250" r="140" fill="none" stroke="url(#goldGradient)" stroke-width="4"/>
+  
+  <!-- Purple Accents -->
+  <polygon points="400,100 420,130 380,130" fill="url(#purpleGradient)"/>
+  <polygon points="400,400 420,370 380,370" fill="url(#purpleGradient)"/>
+  
+  <!-- Crypto Tracker Text -->
+  <rect x="200" y="450" width="400" height="60" fill="none" stroke="url(#goldGradient)" stroke-width="2" rx="5"/>
+  <text x="400" y="485" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="url(#goldGradient)">CRYPTO TRACKER</text>
+</svg>

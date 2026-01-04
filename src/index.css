@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth number transitions */
+.smooth-price-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.smooth-number {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth color transitions for price changes */
+.price-up {
+  animation: priceFlashGreen 0.5s ease;
+}
+
+.price-down {
+  animation: priceFlashRed 0.5s ease;
+}
+
+@keyframes priceFlashGreen {
+  0%, 100% { color: inherit; }
+  50% { color: #10b981; transform: scale(1.05); }
+}
+
+@keyframes priceFlashRed {
+  0%, 100% { color: inherit; }
+  50% { color: #ef4444; transform: scale(1.05); }
+}
+
+/* Smooth opacity for value updates */
+.value-update {
+  animation: valueUpdate 0.3s ease;
+}
+
+@keyframes valueUpdate {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Custom scrollbar for detailed cards */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.7);
+}
+
+:root {
+  --background: 10 10 15;
+  --foreground: 255 255 255;
+  --primary: 147 51 234;
+  --primary-foreground: 255 255 255;
+  --secondary: 30 30 40;
+  --secondary-foreground: 255 255 255;
+  --accent: 59 130 246;
+  --accent-foreground: 255 255 255;
+  --muted: 40 40 50;
+  --muted-foreground: 156 163 175;
+  --card: 20 20 30;
+  --card-foreground: 255 255 255;
+  --border: 255 255 255 / 0.1;
+  --input: 255 255 255 / 0.05;
+  --ring: 147 51 234;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, rgb(10, 10, 15) 0%, rgb(20, 20, 30) 100%);
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #9333ea 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.crypto-glow {
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.3);
+}
+
+.price-up {
+  color: #10b981;
+  animation: pulse-green 2s infinite;
+}
+
+.price-down {
+  color: #ef4444;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes pulse-red {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.7);
+}
+
+/* Animation classes */
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Three.js canvas styling */
+.three-canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Login page specific styles */
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-form {
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Particle effects */
+.particle {
+  position: absolute;
+  background: rgba(147, 51, 234, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-float 8s linear infinite;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
