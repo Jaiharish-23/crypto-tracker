@@ -41,6 +41,18 @@ mongoose.connect(MONGODB_URI, {
 });
 
 // Routes
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Welcome to Crypto Tracker API', 
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      admin: '/admin',
+      health: '/health'
+    }
+  });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/admin', adminRoutes);
 
